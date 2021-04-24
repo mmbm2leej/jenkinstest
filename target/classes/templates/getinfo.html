@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Country Info</title>
+        <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+    <h1 th:text="${country.country_name}">name</h1>
+    <h3>Capitol</h3>
+    <h6 th:text="${country.capitol}">capitol</h6>
+    <h3>Area(square km)</h3>
+    <h6 th:text="${country.geography_areakm2}">area</h6>
+    <h3>Population(in millions)</h3>
+    <h6 th:text="${country.populationmillion}">pop</h6>
+    <h3>GDP(in billions USD)</h3>
+    <h6 th:text="${country.gdpbillion}">gdp</h6>
+
+
+    </body>
+</html>

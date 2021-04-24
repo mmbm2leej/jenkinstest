@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(94,55,72);
+    background: linear-gradient(187deg, rgba(94,55,72,1) 0%, rgba(26,46,71,1) 100%);
+    color: #fff9c6;
+    height: 100vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+}
+
+body h1 {
+    padding: 0.8rem;
+}
+
+body h6 {
+    padding: 1.5rem;
+}
+
+table {
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 0.25rem;
+}
+
+a {
+    text-decoration: none;
+    color: #fff9c6;
+}
+
+form {
+    margin: 0.5rem;
+}
+
+span {
+    font-size: 14px;
+    color: #ff5050;
+}

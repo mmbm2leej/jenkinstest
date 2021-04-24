@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Add a New Country</title>
+        <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <form action="#" th:action="@{/newsave}" th:object="${country}" method="post">
+        <label>Name:</label>
+        <input type="text" th:field="*{country_name}" />
+        <span th:if="${#fields.hasErrors('country_name')}" th:errors="*{country_name}">Name error</span>
+
+        <br>
+        <label>Capitol:</label>
+        <input type="text" th:field="*{capitol}"/>
+        <span th:if="${#fields.hasErrors('capitol')}" th:errors="*{capitol}">Capitol error</span>
+        <br>
+
+        <label>Area(square km):</label>
+        <input type="text" th:field="*{geography_areakm2}"/>
+        <span th:if="${#fields.hasErrors('geography_areakm2')}" th:errors="*{geography_areakm2}">Area error</span>
+        <br>
+
+        <label>Population(in millions):</label>
+        <input type="text" th:field="*{populationmillion}"/>
+        <span th:if="${#fields.hasErrors('populationmillion')}" th:errors="*{populationmillion}">Population error</span>
+        <br>
+
+        <label>GDP(in billions USD):</label>
+        <input type="text" th:field="*{gdpbillion}"/>
+        <span th:if="${#fields.hasErrors('gdpbillion')}" th:errors="*{gdpbillion}">GDP error</span>
+        <br>
+
+        <button type="submit">Save</button>
+
+    </form>
+    </body>
+</html>
+

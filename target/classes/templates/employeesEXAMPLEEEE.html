@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Insert title here</title>
+    </head>
+    <body>
+    <h1 align="center">My Contact List</h1>
+    <br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee:${employees}">
+            <td th:text="${employee.id}"> Id</td>
+            <td th:text="${employee.name}"> Name</td>
+            <td th:text="${employee.email}"> Eamil</td>
+            <td th:text="${employee.country}"> Country</td>
+            <td><a th:href="@{/edit/{id}(id=${employee.id})}">Edit</a></td>
+
+            <td><a th:href="@{/delete/{id}(id=${employee.id})}">Delete</a></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+    </body>
+</html>

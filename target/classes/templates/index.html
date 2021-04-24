@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Testpage</title>
+        <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <form action="#" th:action="@{/addnew}">
+        <button type="submit">Add a new country</button>
+    </form>
+
+        <table border="1" cellpadding="10">
+            <tbody>
+            <tr th:each="country:${countries}">
+                <td>
+                    <a th:href="${country.country_name}" th:text="${country.country_name}">text</a>
+                </td>
+                <td>
+                    <a th:href="@{/edit/{id}(id=${country.country_id})}">Edit</a>
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+
+
+
+    </body>
+
+</html>
